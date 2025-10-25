@@ -1,0 +1,252 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  
+    display: flex;               /*Torna o site lido em colunas horizontais*/
+    flex-direction: column;     /*Torna o display flex de coluna vertical */
+    font-family: 'UnifrakturCook';     /*A virgula simples permite usar uma fonte nova inserida no head*/
+    align-items: center;        /*Alinha conteudo */
+    text-align: center;         /*alinha texto */
+    color: white;           /*colore texto*/
+  background: #111224       /*muda cor do fundo*/;
+}
+.titulo {
+    display: flex;
+    justify-content: center;    /*Alinhamento horizontal de flex ou grid*/
+    text-align: center;         /*alinhamento de texto ou conteúdo na linha*/
+    text-shadow: 10px 12px 14px black;  /*adiciona uma sombra no texto de tamanho x, y e z*/
+
+}
+.logo {
+    display: flex;
+        align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.logo img{
+    border-radius: 100%;       /*Aqui modifica o raio da borda para arredondar*/
+    width: 100px;              /*Define largura*/
+    height: 50px;              /*define altura*/
+     box-shadow:  0 0 20px rgba(230, 57, 70, 0.2);      /*define cor da sombra de um item em posicao x, y e z*/
+}
+nav {
+  position: fixed;        /* fixa no canto da tela */
+  top: 20px;              /* distância do topo */
+  right: 20px;            /* distância da direita */
+  z-index: 1000;          /* fica acima de outros elementos */
+}
+.botao {
+    color: black;
+    background: #fa081c;
+    border-radius: 25px;
+    padding: 10px;
+    width: 250px;
+    box-shadow:  0 0 50px rgba(230, 57, 70, 0.2);
+}
+.botao:hover {         /*É usado para mudar a cor quando link selecionado. hover junto modifica tudo do .botao, hoover separado modifica apenas filhos*/
+    color: #420202;
+}
+
+    /*Trilhas conteudo*/
+
+.trilhas {
+  display: flex;
+  align-items: center;      /* Alinha imagem e texto verticalmente */
+  justify-content: center;  /* Centraliza horizontalmente */
+  gap: 30px;                /* Espaçamento entre imagem e texto */
+  margin: 20px 0;
+  max-width: 900px;
+  text-align: left;
+}
+.trilhas img {
+    width: 400px;
+    height: 200px;
+     box-shadow:  0 0 20px rgba(230, 57, 70, 0.2);
+        border-radius: 10px;
+}
+.trilhas p {
+width: 400px;
+}
+#importante1 {
+    color: red;
+}
+
+    /*tiro conteudo*/
+
+.tiro {
+    display: flex;
+    justify-content: flex-end;      /*coloca conteudo na direita/final da pagina*/
+    text-align: right;
+    align-items: center;
+    max-width: 800px;
+    margin-top: 20px;
+    margin-left: 10%;
+    gap: 35px;
+}
+.tiro img{
+    width: 400px;
+   height: 200px;
+    box-shadow:  0 0 20px rgba(230, 57, 70, 0.2);
+        border-radius: 10px;
+}
+.tiro p {
+ width: 400px;
+}
+#importante2 {
+    color: red;
+}
+    /*Brincadeiras conteudo*/
+
+.brincadeira {
+  display: flex;
+  align-items: center;      /* Alinha imagem e texto verticalmente */
+  justify-content: center;  /* Centraliza horizontalmente */
+  gap: 30px;                /* Espaçamento entre imagem e texto */
+  margin: 20px 0;
+  max-width: 900px;
+  text-align: left;
+}
+.brincadeira img {
+    width: 400px;
+    height: 200px;
+     box-shadow:  0 0 20px rgba(230, 57, 70, 0.2);
+        border-radius: 10px;
+}
+.brincadeira p{
+    width: 400px;
+}
+#importante3 {color: red;}
+
+    /*Cabanas conteudo*/
+
+.cabanas {    
+    display: flex;
+    justify-content: center;
+    text-align: right;
+    align-items: center;
+    max-width: 800px;
+    margin-top: 20px;
+    margin-left: 10%;
+    justify-content: end;
+    gap: 35px;}
+    .cabanas img {
+        width: 400px;
+        height: 200px;
+        box-shadow:  0 0 20px rgba(230, 57, 70, 0.2);
+        border-radius: 10px;
+    }
+    .cabanas p{
+        width: 400px;
+    }
+    #importante4{color: red;}
+  /* Seção do formulário */
+#inscricao {
+  background-color: #1c1d33;
+  padding: 40px;                /*Cria espaco de dentro do conteudo a borda*/
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(230, 57, 70, 0.2);
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Título com cor de destaque */
+#inscricao h2 {
+  text-align: center;
+  color: #e63946; 
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column; /* deixa os elementos um abaixo do outro */
+}
+
+label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #99242e; 
+  text-align: left; /* garante que o texto do label fique alinhado à esquerda */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2c2e4b;
+  color: white;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: 2px solid #e63946;
+}
+
+button[type="submit"] {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #e63946;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+  background-color: #c5303c;
+}
+@media screen and (max-width: 768px) {
+
+  .trilhas,
+  .tiro,
+  .brincadeira,
+  .cabanas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;      /* permite quebrar elementos se não couber */
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .trilhas img,
+  .tiro img,
+  .brincadeira img,
+  .cabanas img,
+  .trilhas p,
+  .tiro p,
+  .brincadeira p,
+  .cabanas p {
+    width: 100%;          /* imagem + texto empilhado quando tela pequena */
+    max-width: 400px;     /* não cresce demais em telas grandes */
+  }
+
+  .trilhas h2, .tiro h2, .brincadeira h2, .cabanas h2 {
+    font-size: 1.4em;     /* títulos menores e proporcionais */
+  }
+
+  #inscricao {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  #inscricao h2 {
+    font-size: 1.6em;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea,
+  button[type="submit"] {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+}
