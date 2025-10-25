@@ -10,7 +10,7 @@ body {
     text-align: center;         /*alinha texto */
     color: white;           /*colore texto*/
   background: #111224       /*muda cor do fundo*/;
-  margin: 5px;                  /*muda margem do corpo*/
+  margin: 20px;                  /*muda margem do corpo*/
 }
 .titulo {
     display: flex;
