@@ -1,67 +1,239 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RED MOON</title>
-    <link rel="stylesheet" href="css/style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&family=Henny+Penny&family=Lugrasimo&family=MedievalSharp&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
-<link rel="icon" type="image/x-icon" href="Imagens/favicon-16x16.png">
+    <title>Acampamento Red Moon</title>
+    <meta name="description" content="Acampamento de férias mais intenso do Rio Grande do Sul – 25/12/2025 a 20/01/2026 em São José dos Ausentes/RS">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&family=Henny+Penny&family=Lugrasimo&family=MedievalSharp&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="Imagens/favicon-16x16.png">
 
+    <style>
+        :root {
+            --vermelho-sangue: #8B0000;
+            --preto: #0c0c0c;
+            --cinza-fosco: #1a1a1a;
+            --branco-fantasma: #f4e9e9;
+        }
+        
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            background: #000 url('Imagens/background-redmoon.jpg') center/cover no-repeat fixed;
+            color: var(--branco-fantasma);
+            font-family: 'Akshar', sans-serif;
+            line-height: 1.6;
+        }
+        header {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: rgba(0,0,0,0.8);
+        }
+        .logo img { max-width: 250px; margin: 0 auto; display: block; }
+        h1 {
+            font-family: 'UnifrakturCook', cursive;
+            font-size: 4.5rem;
+            color: var(--vermelho-sangue);
+            text-shadow: 0 0 15px #ff0000;
+            margin: 1rem 0;
+        }
+        nav {
+            padding: 1rem;
+            background: var(--preto);
+            text-align: center;
+        }
+        nav p {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #ff4444;
+        }
+        .botao {
+            display: inline-block;
+            background: var(--vermelho-sangue);
+            color: white;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: all 0.3s;
+            font-size: 1.3rem;
+        }
+        .botao:hover { background: #ff0000; transform: scale(1.1); }
+
+        section { padding: 4rem 1rem; text-align: center; }
+        .container { max-width: 1200px; margin: 0 auto; }
+
+        .atividade {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            align-items: center;
+            margin: 4rem 0;
+        }
+        .atividade img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255,0,0,0.4);
+        }
+        .atividade h2 {
+            font-family: 'Henny Penny', cursive;
+            font-size: 2.8rem;
+            color: var(--vermelho-sangue);
+        }
+        .atividade p {
+            font-size: 1.3rem;
+            padding: 0 2rem;
+        }
+        span.destaque { color: #ff4444; font-weight: bold; }
+
+        /* Formulário */
+        .inscricao {
+            background: rgba(20,0,0,0.95);
+            padding: 4rem 1rem;
+        }
+        .inscricao form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: grid;
+            gap: 1.5rem;
+        }
+        .inscricao label { font-size: 1.2rem; }
+        .inscricao input, .inscricao textarea, .inscricao select {
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            border-radius: 8px;
+            background: #333;
+            color: white;
+        }
+        .inscricao button {
+            background: var(--vermelho-sangue);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            font-size: 1.3rem;
+            cursor: pointer;
+            border-radius: 50px;
+        }
+        .inscricao button:hover { background: #ff0000; }
+
+        .localizacao a {
+            color: #ff6666;
+            text-decoration: underline;
+            font-size: 1.2rem;
+        }
+
+        footer {
+            background: var(--preto);
+            text-align: center;
+            padding: 3rem 1rem;
+            font-size: 1.1rem;
+        }
+        footer p { margin: 0.5rem 0; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 3rem; }
+            .atividade h2 { font-size: 2.2rem; }
+        }
+    </style>
 </head>
 <body>
-    <div class="logo">
-            <a><img src="Imagens/REdmoon.webp" alt=""></a>
-    </div>
-    <div class="titulo">
-     
-    <h1>Acampamento <br>
-    Red Moon</h1>
-    </div>
+
+    <header>
+        <div class="logo">
+            <img src="Imagens/REdmoon.webp" alt="Logo Acampamento Red Moon">
+        </div>
+        <h1>Acampamento<br>Red Moon</h1>
+    </header>
+
     <nav>
-         <a href="#inscricao" class="botao"> INSCREVA-SE   </a> 
-    </nav> 
-    <div class="trilhas">
-        
-    <a><img src="Imagens/trilha2.0.webp" alt="Trilhas"></a>
-    <h2>Trilhas<p>Trilhas de <span id="importante1">perder o fôlego!</span>
-Aqui em nosso acampamento nós temos diversas trilhas para se explorar e entreter nossos campistas, venha conhecer já!</p> </h2>
-</div>
-<div class="tiro">
-         <h2> Tiro ao alvo <p> Uma área inteira focada em tiros ao ar livre, com instrutores treinados, uma experiência do <span id="importante2">outro lado!</span> </p></h2>
-    <a><img src="Imagens/Tiroaoalvo.webp" alt=""></a>
-</div>
-</section>
-<section id="meio">
-<div class="brincadeira">
-        <a><img src="Imagens/ImagemdoWhatsAppde2025-09-30 à(s)17.23.14_c37d4a99.webp" alt=""></a>
-    <h2>Brincadeiras<p>Temos diversas competições e jogos organizadas para nossos campistas, quem será que <span id="importante3">às competições e sairá vitorioso?</span> </p></h2>
-</div>
-    </div>
-        <div class="cabanas">
-        <h2>Cabanas de LUXO!
-    <p>Aqui em nosso acampamento temos 2 Cabanas de luxo para os meninos e meninas se sentirem confortáveis e <span id="importante4"> terem um sono eterno</span>, e conta também com um refeitório com refeições paranormais de tão boas! </p></h2>
-    <a><img src="Imagens/cabanas.webp" alt=""></a>
+        <p>25 de dezembro de 2025 a 20 de janeiro de 2026</p>
+        <a href="#inscricao" class="botao">INSCREVA-SE AGORA</a>
+    </nav>
+
+    <section class="container">
+        <div class="atividade">
+            <img src="Imagens/trilha2.0.webp" alt="Trilhas incríveis no Acampamento Red Moon">
+            <div>
+                <h2>Trilhas</h2>
+                <p>Trilhas de <span class="destaque">perder o fôlego</span>! Explore caminhos nunca antes vistos e viva aventuras que ficarão marcadas para sempre.</p>
+            </div>
+        </div>
+
+        <div class="atividade">
+            <div>
+                <h2>Tiro ao Alvo</h2>
+                <p>Uma área completa com instrutores profissionais. Uma experiência <span class="destaque">do outro lado</span> que você nunca esquece.</p>
+            </div>
+            <img src="Imagens/Tiroaoalvo.webp" alt="Tiro ao alvo no Red Moon">
+        </div>
+
+        <div class="atividade">
+            <img src="Imagens/ImagemdoWhatsAppde2025-09-30 à(s)17.23.14_c37d4a99.webp" alt="Competições e brincadeiras">
+            <div>
+                <h2>Competições & Brincadeiras</h2>
+                <p>Quem vai dominar as competições e sair como o grande <span class="destaque">vitorioso</span> do Red Moon?</p>
+            </div>
+        </div>
+
+        <div class="atividade">
+            <div>
+                <h2>Cabanas de Luxo</h2>
+                <p>Conforto absoluto, camas macias para um <span class="destaque">sono eterno</span> e refeições paranormais de tão boas!</p>
+            </div>
+            <img src="Imagens/cabanas.webp" alt="Cabanas luxuosas do Red Moon">
+        </div>
     </section>
-</div>
-    <!-- SEÇÃO FORMULÁRIO DE INSCRIÇÃO -->
-<section id="inscricao">
-  <h2>Inscreva-se Agora</h2>
-  <form
-    action="https://formspree.io/f/xdkpoaok"
-    method="POST"
-  >
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+    <section id="inscricao" class="inscricao">
+        <div class="container">
+            <h2>Garanta sua vaga antes que seja tarde</h2>
+            <form action="https://formspree.io/f/xdkpoaok" method="POST">
+                <label for="nome">Nome completo:</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" name="idade" min="8" max="17" placeholder="Quantos anos você tem?" required>
 
-    <label for="mensagem">Nos conte um pouco sobre você:</label>
-    <textarea id="mensagem" name="mensagem" placeholder="Escreva aqui..." rows="4"></textarea>
+                <label for="nascimento">Data de Nascimento:</label>
+                <input type="date" id="nascimento" name="nascimento" required>
 
-    <button type="submit">Enviar</button>
-  </form>
-</section>
+                <label for="tipo-sanguineo">Tipo Sanguíneo:</label>
+                <select id="tipo-sanguineo" name="tipo-sanguineo" required>
+                    <option value="">Selecione seu tipo sanguíneo</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+
+                <label for="mensagem">Fale um pouco sobre você:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Por que você quer vir pro Red Moon?" required></textarea>
+
+                <button type="submit">ENVIAR INSCRIÇÃO</button>
+            </form>
+
+            <p class="localizacao" style="margin-top: 3rem;">
+                <a href="https://maps.app.goo.gl/RuUqLByMjXG7jW6v7" target="_blank">
+                    📍 São José dos Ausentes – RS (clique para ver no mapa)
+                </a>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Acampamento Red Moon – O acampamento que você nunca vai esquecer.</p>
+        <p>© 2025 Red Moon Camp. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
